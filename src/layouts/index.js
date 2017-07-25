@@ -3,35 +3,41 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
-import './index.css'
+import '../assets/css/bootstrap.css'
+import '../assets/css/ct-paper.css'
+import '../assets/css/font-awesome.min.css'
+
+import { Button } from 'react-bootstrap'
 
 const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Gatsby
-            </Link>
-      </h1>
-    </div>
-  </div>
+  <nav className="navbar navbar-ct-transparent navbar-relative " role="navigation-demo" id="register-navbar">
+        <div className="container">
+          <div className="navbar-header">
+            <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+              <span className="sr-only">Toggle navigation</span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+            </button>
+            <Link className="navbar-brand" to="/">Tim White</Link>
+          </div>
+
+          <div className="collapse navbar-collapse" id="navigation">
+            <ul className="nav navbar-nav navbar-right">
+              <li>
+                  <a href="https://linkedin.com/in/timwhite47" className="btn btn-simple" target="_blank">
+                    <i className="fa fa-linkedin fa-3x"></i>
+                  </a>
+              </li>
+              <li>
+                <a href="https://github.com/timwhite47" className="btn btn-simple" target="_blank">
+                  <i className="fa fa-github fa-3x"></i>
+                </a>
+              </li>
+             </ul>
+          </div>
+        </div>
+      </nav>
 )
 
 const TemplateWrapper = ({
@@ -39,21 +45,14 @@ const TemplateWrapper = ({
 }) => (
     <div>
       <Helmet
-        title="Gatsby Default Starter"
+        title="Tim White"
         meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
+          { name: 'description', content: 'Data Scientist living in Seattle' },
+          { name: 'keywords', content: 'seattle, data, data scientist, software, engineering, data engineer, software engineer' },
         ]}
       />
       <Header />
-      <div
-        style={{
-          margin: '0 auto',
-          maxWidth: 960,
-          padding: '0px 1.0875rem 1.45rem',
-          paddingTop: 0,
-        }}
-      >
+      <div>
         {children()}
       </div>
     </div>

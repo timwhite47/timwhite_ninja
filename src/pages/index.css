@@ -1,0 +1,45 @@
+.profile-background {
+  background-image: url("/city.jpg");
+  background-position: center center;
+  background-size: cover;
+  height: 300px;
+  position: relative;
+  margin-top: -110px;
+}
+
+.profile-background .filter-black::after {
+  background-color: rgba(0, 0, 0, 0.5);
+  content: "";
+  display: block;
+  height: 300px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.profile-content {
+  position: relative;
+}
+
+.owner .avatar {
+  margin-top: -85px;
+  padding: 15px;
+  position: relative;
+  z-index: 3;
+}
+
+.owner .name h4 {
+  margin-top: 10px;
+}
+
+ul.nav .btn i.fa {
+  font-size: 3em;
+  color: white;
+}
+
+div.bio {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
